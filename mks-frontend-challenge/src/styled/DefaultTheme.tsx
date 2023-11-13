@@ -16,7 +16,7 @@ export const theme: DefaultTheme = {
     gray:'#2C2C2C'
   },
   fontFamily: {
-    heading: ['IBM Plex Sans', 'sans-serif'].join(','),
+    heading: ['Montserrat'].join(','),
     sans: ['Open Sans', 'Arial', 'Helvetica', 'sans-serif'].join(','),
     mono: ['IBM Plex Mono', 'serif'].join(','),
   },
