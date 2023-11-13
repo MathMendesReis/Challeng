@@ -1,6 +1,4 @@
-import StyledComponentsRegistry from "@/lib/registry"
-
-
+import { DefaultProvider } from "@/components/default-provider/default-provider"
 export default function RootLayout({
   children,
 }: {
@@ -8,11 +6,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <StyledComponentsRegistry>
+      <DefaultProvider>
           <body>
             {children}
           </body>
-      </StyledComponentsRegistry>
+      </DefaultProvider>
     </html>
   )
 }
