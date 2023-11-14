@@ -16,3 +16,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 `
+export const LoadingPageStyled= styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+`
