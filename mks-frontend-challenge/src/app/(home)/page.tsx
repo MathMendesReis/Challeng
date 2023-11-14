@@ -1,36 +1,31 @@
-'use client'
-import Product from '@/components/product'
-import React from 'react'
-import { ContainerProductsStyled, HomePageStyled } from './styled'
-import useProducts from '@/hooks/useProducts'
-import useCartState from '@/context/cart/store'
+'use client';
+import React, { Suspense, lazy } from 'react';
+import useProducts from '@/hooks/useProducts';
+import { ContainerProductsStyled, HomePageStyled } from './styled';
+import ProductSkeleton from '@/components/skeleton/product-skeleton';
+
+const Product = lazy(() => import('@/components/product'));
 
 export default function Home() {
-  const { products } = useProducts()
-  const { cartTotal,cartItems } = useCartState()
-  console.log(cartItems)
+  const { products, isLoading } = useProducts();
 
-  
-
-  console.log(cartItems)
   return (
     <HomePageStyled>
-      <ContainerProductsStyled>
-        {products?.products.map(({ id, name, brand, description, photo, price, createdAt, updatedAt }) => (
-          <>
-            <Product
-              id={id}
-              name={name}
-              brand={brand}
-              description={description}
-              photo={photo}
-              price={price}
-              createdAt={createdAt}
-              updatedAt={updatedAt}
-            />
-          </>
-        ))}
-      </ContainerProductsStyled>
+        <ContainerProductsStyled>
+          {products?.products.map(({ id, name, brand, description, photo, price, createdAt, updatedAt }) => (
+             <Product
+               key={id}
+               id={id}
+               name={name}
+               brand={brand}
+               description={description}
+               photo={photo}
+               price={price}
+               createdAt={createdAt}
+               updatedAt={updatedAt}
+             />
+          ))}
+        </ContainerProductsStyled>
     </HomePageStyled>
-  )
+  );
 }

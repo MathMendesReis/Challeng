@@ -10,7 +10,7 @@ export default function useProducts() {
     return instance.get(API_URL)
   }
 
-  const { data } = useQuery({
+  const { data,isLoading } = useQuery({
     queryKey: ['products'],
     queryFn: () => fecth(API_URL),
   })
@@ -18,6 +18,7 @@ export default function useProducts() {
   const products = data?.data
  
   return {
-    products
+    products,
+    isLoading
   }
 }

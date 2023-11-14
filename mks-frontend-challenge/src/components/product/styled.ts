@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 
+
 export const ProductStyled = styled.article`
 width: 217.562px;
 height: 285px;
