@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { ButtonClosedModal, ContainerH1WithButton, ContainerProduct, Footer, H1, ModalStyled, ListProductsCart, TotalStyled, TotalPriceStyled, ContainerTotalPrice, ButtonFinish, ButtonRmvItemCart, ContainerInputQuantity, FormQuantity } from './styled'
+import { ButtonClosedModal, ContainerH1WithButton, ContainerProduct, Footer, H1, ModalStyled, ListProductsCart, TotalStyled, TotalPriceStyled, ContainerTotalPrice, ButtonFinish, ButtonRmvItemCart, ContainerInputQuantity, FormQuantity, ParagraphName, ParagraphQtd,  ParagraphPrice, ButtonPlus, ButtonMinus } from './styled'
 import ModalState from '@/context/modal/store'
 import Closed from '@/icons/closed'
 import useCartState from '@/context/cart/store'
@@ -21,35 +21,35 @@ export default function Modal() {
         {cartItems.map((item) => (
           <ContainerProduct key={item.id}>
             <Image src={item.photo} alt='' quality={100} width={46} height={57} />
-            <p>{item.name}</p>
+            <ParagraphName>{item.name}</ParagraphName>
             <ContainerInputQuantity>
-            <p>Qtd</p>
+            <ParagraphQtd>Qtd</ParagraphQtd>
             <FormQuantity>
-              <button
-              // onClick={()=>addToCart(item)} 
-              >+</button>
+              <ButtonPlus
+              onClick={()=>addToCart(item)} 
+              >+</ButtonPlus>
               <p>{item.quantity}</p>
-              <button
-              // onClick={()=>removeCartItem(item.id)} 
-              >-</button>
+              <ButtonMinus
+              onClick={()=>removeCartItem(item.id)} 
+              >-</ButtonMinus>
             </FormQuantity>
             </ContainerInputQuantity>
-            <p>{item.price}</p>
+            <ParagraphPrice>{item.price}</ParagraphPrice>
             <ButtonRmvItemCart onClick={()=>removeCartItem(item.id)} >
               <Closed />
             </ButtonRmvItemCart>
           </ContainerProduct>
         ))}
       </ListProductsCart>
-      <Footer>
+       <Footer>
         <ContainerTotalPrice>
           <TotalStyled>Total</TotalStyled>
           <TotalPriceStyled>{cartTotal}</TotalPriceStyled>
         </ContainerTotalPrice>
-        <ButtonFinish>
+         <ButtonFinish>
           <p>Finalizar compra</p>
-        </ButtonFinish>
-      </Footer>
+        </ButtonFinish> 
+      </Footer> 
     </ModalStyled>
   )
 }

@@ -1,16 +1,27 @@
 import styled from "styled-components";
 
+
+
 export const ModalStyled = styled.dialog`
-width: 30.375rem;
-height: 91vh;
-flex-shrink: 0;
-background: #0F52BA;
-box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
-position: absolute;
-top: 0%;
-left: 73%;
-border: none;
-`
+  width: 90%;
+  max-width: 30.375rem; 
+  min-height: 100vh;
+  flex-shrink: 0;
+  background: #0F52BA;
+  box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  top: 0%;
+  left: 86.8%; 
+  transform: translateX(-50%);
+  border: none;
+@media (max-width: 600px) {
+    width: 100%; 
+    max-width: none; 
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.13); 
+    left: 0; 
+    transform: none; 
+}
+`;
 
 export const H1 = styled.h1`
 color: #FFF;
@@ -67,15 +78,16 @@ gap: 24px;
 overflow: auto;
 
 &::-webkit-scrollbar {
-    width: 0px;
+    display: none;
 }
 `
 
 export const Footer = styled.footer``
 
 export const ContainerProduct = styled.li`
-width: 379px;
-height: 95px;
+width: 23.6875rem;
+max-height: 5.9375rem;
+background-color: red;
 flex-shrink: 0;
 border-radius: 8px;
 background: #FFF;
@@ -107,13 +119,11 @@ padding: 0 36px;
 `
 
 export const ButtonFinish = styled.button`
-width: 100%;
-height: 106px;
-flex-shrink: 0;
-background: #000;
+background-color: #000;
 border: none;
-position: absolute;
-top: 100%;
+padding: 20px 36px;
+width: 100%;
+min-height: 90px;
 p{
   color: #FFF;
 font-family: Montserrat;
@@ -131,10 +141,10 @@ flex-shrink: 0;
 display: flex;
 flex-direction: column;
 margin-right: 12px;
-margin-top: 12%;
+margin-top: 8%;
 `
 
-export const FormQuantity = styled.form`
+export const FormQuantity = styled.div`
 display: flex;
 justify-content: space-between;
 border: 1px solid ;
@@ -142,4 +152,61 @@ width: 50px;
 height: 25px;
 flex-shrink: 0;
 padding: 6%;
+border-radius: 4px;
+border: 0.3px solid #BFBFBF;
+background: #FFF;
+`
+
+export const ParagraphName = styled.p`
+width: 5rem;
+height: 2.0625rem;
+flex-shrink: 0;
+color: #2C2C2C;
+
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 17px; /* 130.769% */
+`
+export const ParagraphQtd = styled.p`
+color: #000;
+font-family: Montserrat;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+`
+export const ParagraphPrice = styled.p`
+width: 62px;
+height: 17px;
+flex-shrink: 0;
+color: #000;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 17px; /* 121.429% */
+`
+
+const BaseButton = styled.button`
+width: 0.9375rem;
+color: #000;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background: none;
+border: none;
+`
+
+export const ButtonPlus = styled(BaseButton)`
+border-right: 1px solid #BFBFBF;
+
+`
+export const ButtonMinus = styled(BaseButton)`
+border-left: 0.2px solid #BFBFBF;
+
+
 `
