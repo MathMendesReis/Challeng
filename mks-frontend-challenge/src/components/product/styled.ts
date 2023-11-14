@@ -26,14 +26,15 @@ font-weight: 400;
 line-height: 19px; /* 118.75% */
 `
 export const PriceProductStyled = styled.p`
-width: 51px;
-height: 18px;
+width: 4.0625rem;
+height: 1.125rem;
 flex-shrink: 0;
 color: #FFF;
 font-family: Montserrat;
-font-size: 15px;
+font-size: 12px;
 font-style: normal;
 font-weight: 700;
+text-align: center;
 line-height: 15px; /* 100% */
 `
 export const PriceDescriptionStyled = styled.p`

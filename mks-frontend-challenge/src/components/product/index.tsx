@@ -16,6 +16,10 @@ export interface Product {
 
 export default function Product(props:Product) {
   const { addToCart } = useCartState()
+  const priceNumber = parseFloat(props.price);
+  const priceFormatted = priceNumber.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+
 
   return (
     <ProductStyled>
@@ -23,7 +27,7 @@ export default function Product(props:Product) {
       <DivWithNameAndPrice>
         <NameProductStyled>{props.name}</NameProductStyled>
         <PriceContainerProductStyled>
-          <PriceProductStyled>{props.price}</PriceProductStyled>
+          <PriceProductStyled>{priceFormatted}</PriceProductStyled>
         </PriceContainerProductStyled>
       </DivWithNameAndPrice>
       <PriceDescriptionStyled>Redesigned from scratch and completely revised.</PriceDescriptionStyled>
