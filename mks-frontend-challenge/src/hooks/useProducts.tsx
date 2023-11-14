@@ -1,8 +1,23 @@
 import React from 'react'
-import axios, { AxiosPromise } from 'axios'
+import { AxiosPromise } from 'axios'
 import { useQuery } from '@tanstack/react-query'
+import { ProductsFecthResponse } from '@/types/product'
+import { instance } from '@/lib/axios'
 export default function useProducts() {
-  const API_URL = 'https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=6&sortBy=id&orderBy=DESC'
+  const API_URL = `/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC`
 
-  return {}
+  const fecth = (query: string): AxiosPromise<ProductsFecthResponse> => {
+    return instance.get(API_URL)
+  }
+
+  const { data } = useQuery({
+    queryKey: ['products'],
+    queryFn: () => fecth(API_URL),
+  })
+
+  const products = data?.data
+ 
+  return {
+    products
+  }
 }
