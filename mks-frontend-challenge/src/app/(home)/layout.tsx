@@ -1,3 +1,4 @@
+import Modal from '@/components/dialog'
 import Header from '@/components/header-default'
 import type { Metadata } from 'next'
 
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
+        <Modal/>
         {children}
       </body>
     </html>
