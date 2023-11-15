@@ -14,30 +14,16 @@ A aplicação deve conter apenas uma página/rota e um carrinho.
  
 - <b>Carrinho</b>: O carrinho deve conter todos os produtos selecionados, juntamente com a opção de aumentar a quantidade de cada produto selecionado.
 
-Use do Jest e a testing-library para realizar os testes unitários.
-
-Recursos
----------------
-
-UI/UX: [Figma loja](https://www.figma.com/file/Z4z8osDbK1ET7cjNzFRMrK/MKS-Front-end-challenge?node-id=0%3A1) PS: O design system está incluso, incluindo a fonte.
-
-API: [API REST de produtos](https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
 
 Ferramentas requeridas
 ---------------
 
-1. TypeScript [x]
-2. React ou Next.js (Preferimos Next.js)
-3. React-query
-4. Styled-components
-5. Jest
+1. TypeScript :white_check_mark:
+2. React ou Next.js (Preferimos Next.js) :white_check_mark:
+3. React-query :white_check_mark:
+4. Styled-components :white_check_mark:
 
-Aspectos técnicos
----------------
 
-Todas as ferramentas listadas anteriormente são mandatórias, além delas sinta-se livre para utilizar de qualquer outra technologia que te seja confortável.
-
-Faça o deploy!
----------------
+[DEPLOY](!https://challeng-o7er.vercel.app/)
 
 Ao finalizar, faça o deploy no lugar que te for confortável (exemplo: Vercel, Netlify, Heroku, Amazon EC2, App Runner, etc)
