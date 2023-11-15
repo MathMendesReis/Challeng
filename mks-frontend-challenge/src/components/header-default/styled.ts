@@ -15,7 +15,7 @@ padding-right: 5%;
 export const TitleStyled = styled.h1`
 color: #FFF;
 
-font-family: Montserrat;
+font-family: ${({theme})=>theme.fontFamily.heading};
 font-size: ${({theme})=>theme.fontSize["4xl"]};
 font-style: normal;
 font-weight: 600;
@@ -26,8 +26,8 @@ text-align: center;
 `
 
 export const ButtonCart = styled.button`
-width: 90px;
-height: 45px;
+width: 5.625rem;
+height: 2.8125rem;
 flex-shrink: 0;
 border-radius: 8px;
 background: #FFF;
@@ -40,7 +40,7 @@ justify-content: center;
 gap: 9px;
 >p{
 color: ${({theme})=>theme.colors.black};
-font-size: 18px;;
+font-size: ${({theme})=>theme.fontSize.lg};
 font-family: ${({theme})=>theme.fontFamily.heading};
 font-size: ${({theme})=>theme.fontSize.lg};
 font-style: normal;
@@ -50,7 +50,7 @@ line-height: normal;
 `
 
 export const ParagraphStyled = styled(TitleStyled)`
-font-family: Montserrat;
+font-family: ${({theme})=>theme.fontFamily.heading};
 font-size: ${({theme})=>theme.fontSize.xl};
 font-weight: 300;
 text-align: left ;

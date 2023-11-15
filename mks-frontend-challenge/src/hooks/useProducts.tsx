@@ -14,7 +14,6 @@ export default function useProducts() {
     queryKey: ['products'],
     queryFn: async () => await fetch(API_URL),
   })
-
   const products = data?.data
  
   return {

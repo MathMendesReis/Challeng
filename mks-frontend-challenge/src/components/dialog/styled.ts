@@ -26,7 +26,7 @@ export const ModalStyled = styled.dialog`
 export const H1 = styled.h1`
 color: #FFF;
 font-family: Montserrat;
-font-size: 27px;
+font-size: ${({theme})=>theme.fontSize["2xl"]};
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -44,8 +44,8 @@ padding: 36px 45px;
 
 `
 const ButtonBase = styled.button`
-width: 38px;
-height: 38px;
+width: 2.375rem;
+height: 2.375rem;
 flex-shrink: 0;
 background-color: #000;
 border-radius: 999px;
@@ -58,8 +58,8 @@ justify-content: center;
 
 export const ButtonClosedModal = styled(ButtonBase)``
 export const ButtonRmvItemCart= styled(ButtonBase)`
-width: 18px;
-height: 18px;
+width: 1.125rem;
+height: 1.125rem;
 flex-shrink: 0;
 padding: 5px;
 position: relative;
@@ -101,7 +101,7 @@ justify-content: space-between;
 const TextStyled = styled.p`
 color: #FFF;
 font-family: Montserrat;
-font-size: 28px;
+font-size: ${({theme})=>theme.fontSize["2xl"]};
 font-style: normal;
 font-weight: 700;
 line-height: 15px; /* 53.571% */
@@ -127,7 +127,7 @@ min-height: 90px;
 p{
   color: #FFF;
 font-family: Montserrat;
-font-size: 28px;
+font-size: ${({theme})=>theme.fontSize["2xl"]};
 font-style: normal;
 font-weight: 700;
 line-height: 15px; /* 53.571% */
@@ -148,8 +148,8 @@ export const FormQuantity = styled.div`
 display: flex;
 justify-content: space-between;
 border: 1px solid ;
-width: 50px;
-height: 25px;
+width: 3.125rem;
+height: 1.5625rem;
 flex-shrink: 0;
 padding: 6%;
 border-radius: 4px;
@@ -164,7 +164,7 @@ flex-shrink: 0;
 color: #2C2C2C;
 
 font-family: Montserrat;
-font-size: 13px;
+font-size: ${({theme})=>theme.fontSize.md};
 font-style: normal;
 font-weight: 400;
 line-height: 17px; /* 130.769% */
@@ -172,18 +172,18 @@ line-height: 17px; /* 130.769% */
 export const ParagraphQtd = styled.p`
 color: #000;
 font-family: Montserrat;
-font-size: 12px;
+font-size: ${({theme})=>theme.fontSize.sm};
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 `
 export const ParagraphPrice = styled.p`
-width: 62px;
-height: 17px;
+width: 3.875rem;
+height: 1.0625rem;
 flex-shrink: 0;
 color: #000;
 font-family: Montserrat;
-font-size: 14px;
+font-size: ${({theme})=>theme.fontSize.md};
 font-style: normal;
 font-weight: 700;
 line-height: 17px; /* 121.429% */
@@ -193,7 +193,7 @@ const BaseButton = styled.button`
 width: 0.9375rem;
 color: #000;
 font-family: Montserrat;
-font-size: 16px;
+font-size: ${({theme})=>theme.fontSize.base};
 font-style: normal;
 font-weight: 400;
 line-height: normal;

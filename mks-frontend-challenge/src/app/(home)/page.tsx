@@ -7,7 +7,7 @@ import ProductSkeleton from '@/components/skeleton/product-skeleton';
 const Product = lazy(() => import('@/components/product'));
 
 export default function Home() {
-  const { products, isLoading } = useProducts();
+  const { products } = useProducts();
 
   return (
     <HomePageStyled>
